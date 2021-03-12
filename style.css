@@ -1,21 +1,24 @@
 * {
   box-sizing: border-box;
 }
+
 img {
   width: 100%;
 }
+
 body {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
 }
 
-
 .flex {
   display: flex;
 }
+
 .wrap {
   flex-wrap: wrap;
 }
+
 header {
   width: 100vw;
   height: 20vh;
@@ -23,16 +26,29 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  background-color: rgb(0, 0, 0);
 }
+
+header a{
+  position: absolute;
+  top:0;
+  right:0;
+  padding-top:5px;
+  width:22vw;
+}
+
 h1{
     text-transform: uppercase;
     font-weight:700;
+    color: white;
 }
+
 #container {
   width: 100vw;
   height: 80vh;
   z-index: 1;
 }
+
 #command {
   width: 30vw;
   height: 80vh;
@@ -47,10 +63,12 @@ h1{
   margin:0;
   z-index: 100;
   position: relative;
+  border:1px solid rgb(172, 172, 172);
   box-shadow: 11px 1px 6px -6px rgba(0,0,0,0.65);
 -webkit-box-shadow: 11px 1px 6px -6px rgba(0,0,0,0.65);
 -moz-box-shadow: 11px 1px 6px -6px rgba(0,0,0,0.65);
 }
+
 #message {
   width:100%;
   height:2em;
@@ -61,6 +79,7 @@ h1{
   padding-top: 3%;
   margin-top: 10%;
   border-radius: 0.7em;
+  border: 2px solid rgb(255, 234, 113);
   background-image: url('../IMG/69181026-led-display-screen-background-texture.jpg');
   background-size:400px;
   background-color: #fdec00;
@@ -69,12 +88,16 @@ h1{
   -webkit-box-shadow: 3px 11px 12px 0px rgba(0, 0, 0, 0.75) inset;
   -moz-box-shadow: 3px 11px 12px 0px rgba(0, 0, 0, 0.75) inset;
 }
+
 .keyboard {
   width: 100%;
   padding-top: 20%;
   justify-content: space-between;
+  margin-bottom: 2%;
 }
+
 .key {
+  background-color: #fdec00;
   font-family: 'Space Mono', monospace;
   width: 10%;
   font-size: 1.5em;
@@ -84,18 +107,34 @@ h1{
   padding: 2%;
   margin: 2%;
 }
-.key:hover {
+
+.key:hover{
   cursor: pointer;
-  background-color: #fafafa;
+  background-color: #fdfacf;
   border: none;
 }
+.key:focus{
+  border: none;
+}
+
 #command a {
+  width: 100%;
+  height:1.5em;
   font-size: 2em;
-  padding-top: 15%;
-  padding-left: 47%;
+  padding-top: 1%;
+  text-align: center;
   color: black;
   text-decoration: none;
+  border: 1px solid rgb(196, 166, 1);
+  border-radius: 0.75em;
 }
+
+#command a:hover {
+  cursor: pointer;
+  background-color: #fdfacf;
+  border: none;
+}
+
 #display {
   width: 100vw;
   height: 80vh;
@@ -105,21 +144,30 @@ h1{
   position: absolute;
   flex-direction: column;
   background-color: #e0e0e0;
-
 }
+
 .pendu {
   width: 100%;
   height: 55vh;
 }
+
 .pendu figure {
   width: 100%;
-  height: 55vh;
+  height: 30vh;
   margin: 0;
 }
-.pendu img {
+
+.pendu svg {
   width: 700px;
   transform:translate(560px,-50px);
 }
+
+.hang{
+  opacity:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
 .word {
   width: 100%;
   height: 25vh;
@@ -127,7 +175,8 @@ h1{
   justify-content: center;
   align-items: center;
 }
-.result {
+
+#result {
   width: 30%;
   height: 1.5em;
   padding: 2%;
@@ -142,4 +191,9 @@ h1{
   box-shadow: 3px 11px 12px 0px rgba(0, 0, 0, 0.75) inset;
   -webkit-box-shadow: 3px 11px 12px 0px rgba(0, 0, 0, 0.75) inset;
   -moz-box-shadow: 3px 11px 12px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.letter{
+  color:black;
+  margin: 0 0.5em;
 }
