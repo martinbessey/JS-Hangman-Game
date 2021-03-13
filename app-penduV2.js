@@ -12,7 +12,7 @@ for (let i = 0; i < result.length; i++) {//On affiche autant de span que de lett
   document.querySelector('#result').innerHTML += `<span class="letter">${result[i]}</span>`;
 }
 
-let victory = false;
+
 
 let msg = document.getElementById("message");
 msg.innerHTML = "Select a letter";
@@ -23,7 +23,7 @@ msg.innerHTML = "Select a letter";
 }*/
 //Création d'une constante correspondant au boutons
 const touches = document.querySelectorAll("#keyboard button");
-victory
+
 for (let touche of touches){ 
   touche.addEventListener('click', function(){ 
     this.style.display = 'none';
