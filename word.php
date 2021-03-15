@@ -19,7 +19,7 @@ $req->bindParam('difficulty', $difficultyMot);
 $req->bindParam('theme', $theme);
 
 $req->execute();
-$result = $req->fetchAll(PD::FETCH_ASSOC);
+$result = $req->fetchAll(PDO::FETCH_ASSOC);
 
 $data = $result[0];
 echo $data;
