@@ -1,11 +1,5 @@
 <?php
 
-$sql = <?php
-
-
-
-
-
 try{
     $connexion = new PDO(
         'mysql:host=localhost:3306;dbname=hangman',
