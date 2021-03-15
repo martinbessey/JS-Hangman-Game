@@ -12,8 +12,8 @@ $difficultyMot =$data->difficultyMot;
 
 //requête préparée
 
-$req = $dbh->prepare('SELECT w.word FROM a.answers LEFT JOIN theme t ON m.ID_theme = t.id
-LEFT JOIN difficulte d ON m.in_difficulty = d.id WHERE t.name = :theme AND d.name = difiiculty'); 
+$req = $dbh->prepare('SELECT w.word FROM a.answers LEFT JOIN theme t ON m.ID_theme = t.id_
+LEFT JOIN difficulty d ON m.ID_difficulty = d.id WHERE t.theme_name = :theme AND d.diff_name = difficulty'); 
 
 $req->bindParam('difficulty', $difficultyMot);
 $req->bindParam('theme', $theme);
